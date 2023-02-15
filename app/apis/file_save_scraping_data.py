@@ -1,5 +1,5 @@
 from fastapi import APIRouter     
-from services.file_facebook_scraper_class import *
+from services.file_facebook_scraper_class import FacebookScraper
 
 
 router = APIRouter()
