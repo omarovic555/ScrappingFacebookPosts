@@ -7,3 +7,5 @@ loguru
 sqlalchemy 
 
 pandas 
+
+Pytest
