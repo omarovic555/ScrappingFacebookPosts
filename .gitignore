@@ -1,11 +1,8 @@
-# Ignore the __pycache__ directory
-app/__pycache__/
-
 # Ignore Python bytecode files
 *.pyc
 *.pyo
 *.pyd
 
 # Ignore Python cache directories
+**/__pycache__/
 app/.pytest_cache/
-
