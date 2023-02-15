@@ -1,5 +1,5 @@
 # Ignore the __pycache__ directory
-__pycache__/
+app/__pycache__/
 
 # Ignore Python bytecode files
 *.pyc
@@ -7,4 +7,5 @@ __pycache__/
 *.pyd
 
 # Ignore Python cache directories
-.pytest_cache/
+app/.pytest_cache/
+
