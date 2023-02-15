@@ -1,0 +1,9 @@
+fastapi[all]
+
+facebook_scraper 
+
+loguru 
+
+sqlalchemy 
+
+pandas 
