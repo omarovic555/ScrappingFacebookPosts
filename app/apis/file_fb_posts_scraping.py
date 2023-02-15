@@ -1,10 +1,12 @@
 from fastapi import APIRouter
-from services import file_scraperservice
+from services.file_facebook_scraper_class import *
+
 
 router = APIRouter()
 
-@router.get('/scraper')
-async def scraper(pageId: str) :
+
+@router.get('/scrape-posts/{pageId}')
+async def scrape_posts(pageId: str):
     """
     Scrapes Facebook posts from the specified URL and returns the results as a list of dictionaries.
 
@@ -19,5 +21,8 @@ async def scraper(pageId: str) :
         To scrape Facebook posts the URL https://facebook.com/pageAlpha, make a GET request to the endpoint:
         /scraper?url=pageAlpha
     """
-    result = await file_scraperservice.get_scraped_posts(pageId)
-    return result
+    scraper = FacebookScraper()
+    # Appeler la méthode get_scraped_posts sur l'instance scraper de FacebookScraper
+    scraped_posts = await scraper.get_scraped_posts(pageId)
+    return scraped_posts
+

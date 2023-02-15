@@ -14,10 +14,9 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 EXPOSE 8000
 EXPOSE 8080
 # Define environment variable
-ENV NAME World
-
+ENV DATABASE_URL="sqlite:///mydatabase.db"
+# Run the command to execute the tests
+RUN python -m pytest tests/tests.py -sv
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 
-# Run the command to execute the tests
-RUN python -m pytest tests/tests.py -sv

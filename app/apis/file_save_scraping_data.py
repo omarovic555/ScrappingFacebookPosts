@@ -1,6 +1,7 @@
 from fastapi import APIRouter     
-#from services import file_save_scraping_data_service
-from services import file_scraperservice
+from services.file_facebook_scraper_class import *
+
+
 router = APIRouter()
 
 @router.get('/savedata')
@@ -19,5 +20,6 @@ async def savedata(pageId: str) :
         To save scraped data from the URL https://facebook.com/pageAlpha, make a GET request to the endpoint:
         /savedata?url=pageAlpha
     """
-    result = await file_scraperservice.create_table_and_insert_data(pageId)
+    scraper = FacebookScraper()
+    result = await scraper.create_table_and_insert_data(pageId)
     return result
