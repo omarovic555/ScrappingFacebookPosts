@@ -18,3 +18,6 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
+
+# Run the command to execute the tests
+RUN python -m pytest tests/tests.py -sv
