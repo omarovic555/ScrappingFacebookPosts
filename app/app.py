@@ -11,12 +11,12 @@ Functions:
 
 import uvicorn
 from fastapi import FastAPI
-from apis import file_fb_posts_scraping, file_save_scraping_data
+from apis import fb_posts_scraping, save_scraping_data
 
 app = FastAPI()
 
-app.include_router(file_fb_posts_scraping.router)
-app.include_router(file_save_scraping_data.router)
+app.include_router(fb_posts_scraping.router)
+app.include_router(save_scraping_data.router)
 
 @app.get('/')
 def index() -> dict:

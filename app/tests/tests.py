@@ -1,10 +1,11 @@
 from fastapi.testclient import TestClient
 from loguru import logger
-import uvicorn
+import pytest
+
 import sys
 sys.path.append("..")  # Add path to root directory
 from app import app  # Import app from root directory
-import pytest
+
 
 client = TestClient(app)
 
@@ -27,5 +28,4 @@ def test_scrape_posts():
     logger.info("TestScraper Passed")
 
 if __name__ == "__main__":
-    #uvicorn.run(app, host='127.0.0.1', port=8000)
     pytest.main()
