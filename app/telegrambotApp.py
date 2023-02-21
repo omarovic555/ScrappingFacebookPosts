@@ -4,8 +4,8 @@ from facebook_scraper import get_posts
 from loguru import logger
 
 
-TOKEN = '6162231182:AAEeKmw5nOH39NsKzQfy3PB9i539xVTm0BQ'
-BOT_CHAT_ID = "6162231182"
+TOKEN = '**************************************************'
+BOT_CHAT_ID = "*********************"
 CHAT_ID = "************"
 
 bot = telebot.TeleBot(TOKEN)
