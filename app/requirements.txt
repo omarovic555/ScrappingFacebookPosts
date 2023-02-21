@@ -4,3 +4,4 @@ loguru
 sqlalchemy
 pandas
 pytest
+pyTelegramBotAPI

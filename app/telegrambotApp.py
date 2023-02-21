@@ -4,9 +4,9 @@ from facebook_scraper import get_posts
 from loguru import logger
 
 
-TOKEN = '**************************************************'
-BOT_CHAT_ID = "*********************"
-CHAT_ID = "************"
+TOKEN = '61************************************m0BQ'
+BOT_CHAT_ID = "6*************2"
+CHAT_ID = "2*********4"
 
 bot = telebot.TeleBot(TOKEN)
 x = bot.get_me()
