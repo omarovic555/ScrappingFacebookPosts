@@ -1,12 +1,16 @@
-
 import telebot
 from facebook_scraper import get_posts
 from loguru import logger
+import os
+from dotenv import load_dotenv
+from pathlib import Path
 
+dotenv_path = Path('C:/Users/user/Desktop/ScrappingFacebookPosts/app/config.env')
+load_dotenv(dotenv_path=dotenv_path)
+TOKEN = os.getenv('TOKEN')
 
-TOKEN = '61************************************m0BQ'
-BOT_CHAT_ID = "6*************2"
-CHAT_ID = "2*********4"
+BOT_CHAT_ID = "6091946077"
+CHAT_ID = "2123256274"
 
 bot = telebot.TeleBot(TOKEN)
 x = bot.get_me()
@@ -42,5 +46,5 @@ def handle_number(message):
     bot.send_message(CHAT_ID,str(posts))
 
 # Start the bot
-bot.polling()
+bot.polling(timeout=120)
 

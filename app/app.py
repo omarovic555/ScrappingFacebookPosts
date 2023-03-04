@@ -11,7 +11,7 @@ Functions:
 
 import uvicorn
 from fastapi import FastAPI
-from apis import fb_posts_scraping, save_scraping_data
+from apis import fb_posts_scraping,save_scraping_data
 
 app = FastAPI()
 

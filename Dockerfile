@@ -10,5 +10,9 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Run the command to execute the tests
-CMD ["python", "telegrambotApp.py"]
+# Define environment variable
+ENV DATABASE_URL="sqlite:///mydatabase.db"
+
+#  Specifies the default command to be run when a container is started from the image. 
+CMD ["python", "app.py"]
+

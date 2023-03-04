@@ -5,6 +5,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
+*.env
 # Ignore Python cache directories
 .pytest_cache/
