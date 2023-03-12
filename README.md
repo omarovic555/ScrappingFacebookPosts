@@ -2,7 +2,7 @@
 
 ### first of all, you need to install docker to containerize the scrapping services, as you notice there are three dockerfiles, the first offers two webservices ( fb_posts_scrapping.py and save_scrapping_data.py ) the first one which extracts the data posts of a facebook page and the second which saves this result in an Alchemy database, the second file is to test the two webservices and the last dockerfile is to launch a telegram bot which takes the page id as a parameter facebook and return scrapping result in telegram chat.
 
-### So before building the 3 images from the dockerfiles Don't forget to set a config.env file which contains an environment variable which contains the token value for the telegram bot.
+### So before building the 3 images from the dockerfiles Don't forget to set a config.env file in \app directory  which contains an environment variable which contains the token value for the telegram bot.
 
 ### Then run these commands to build the images and run the containers in the ScrappingFacebookPosts\app directory
 
